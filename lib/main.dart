@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app_/Homepage.dart';
-import 'package:quiz_app_/provider/providerpage.dart';
+import 'package:quiz_app_/view/Homepage.dart';
+import 'package:quiz_app_/controller/providerpage.dart';
 
 void main() {
   runApp(MyApp());

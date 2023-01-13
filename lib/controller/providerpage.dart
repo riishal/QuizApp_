@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart'as http;
-import '../model.dart';
+import '../model/model.dart';
 import '../utility/constats.dart';
 
 class QuestionProvider with ChangeNotifier {

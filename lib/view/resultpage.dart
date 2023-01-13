@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app_/Homepage.dart';
-import 'package:quiz_app_/provider/providerpage.dart';
+import 'package:quiz_app_/view/Homepage.dart';
+import 'package:quiz_app_/controller/providerpage.dart';
 import 'package:lottie/lottie.dart';
 
 class Resultpage extends StatelessWidget {
@@ -40,7 +40,7 @@ class Resultpage extends StatelessWidget {
         children: [
           win
               ? LottieBuilder.network(
-                  'https://assets2.lottiefiles.com/packages/lf20_ky24lkyk.json')
+                  'https://assets5.lottiefiles.com/packages/lf20_wys2rrr6.json')
               : Padding(
                   padding: const EdgeInsets.only(top: 430, left: 165),
                   child: LottieBuilder.network(

@@ -4,8 +4,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app_/provider/providerpage.dart';
-import 'package:quiz_app_/resultpage.dart';
+import 'package:quiz_app_/controller/providerpage.dart';
+import 'package:quiz_app_/view/resultpage.dart';
 import 'package:quiz_app_/utility/constats.dart';
 
 class Homepage extends StatelessWidget {
@@ -24,8 +24,7 @@ class Homepage extends StatelessWidget {
       getdata.fetchQuestion();
       if(getdata.status==ProviderStatus.COMPLETED){
         
-      
-      return Scaffold(
+         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
             leading: const Icon(
@@ -79,7 +78,7 @@ class Homepage extends StatelessWidget {
                 // ignore: sized_box_for_whitespace
                 Container(
                   height: 70,
-                  // ignore: sort_child_properties_last
+                
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10, top: 10),
                     child: Text(getdata.data[0].questions[indexfornextquestion].question),
@@ -178,15 +177,11 @@ class Homepage extends StatelessWidget {
                         onPressed: (() {
                           getdata.markIncreaser();
                           indexfornextquestion++;
-
-
-                          
                           pageIndex < 10
                               ? pageIndex++
                               : Navigator.of(context).push(MaterialPageRoute(
                                   builder: ((context) => Resultpage())));
                                   buttonIndex = -1;
-                                  // match=false;
 
                           print(context.read<QuestionProvider>().mark);
                         }),
@@ -216,7 +211,7 @@ class Homepage extends StatelessWidget {
       }else{
         return CircularProgressIndicator();
       }
-    
+   
     });
 
   }
